@@ -38,6 +38,11 @@ void main() {
     test('Multi-Negative numbers should throw an exception', () {
       expect(() => StringCalculator.add("1,-2,-3"), throwsA(isA<Exception>()));
     });
+
+    test('Numbers greater than 1000 should be ignored', () {
+      expect(StringCalculator.add("2,1001"), 2);
+    });
+
   });
 }
 

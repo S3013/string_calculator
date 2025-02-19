@@ -22,10 +22,15 @@ class StringCalculator {
 
     if (negatives.isNotEmpty) {
 
+      if (negatives.length>1){
+
+          print('Negative Exception ${negatives.join(',')}');
+      }
+
       throw Exception("Negative numbers not allowed: ${negatives.join(", ")}");
     }
 
-    return numList.reduce((a, b) => a + b);
+    return numList.where((num) => num <= 1000).reduce((a, b) => a + b);
 
 
   }
