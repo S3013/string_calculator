@@ -19,7 +19,17 @@ void main() {
       expect(StringCalculator.add("1,2,3,4"), 10);
     });
 
+    test('Newline as delimiter should work', () {
+      expect(StringCalculator.add("1\n2,3"), 6);
+    });
 
+    test('Custom delimiter should be supported', () {
+      expect(StringCalculator.add("//;\n1;2"), 3);
+    });
+
+    test("Custom Multi-character delimiters ", (){
+      expect(StringCalculator.add('//[***]\n1***2***3'), 6);
+    });
 
   });
 }
