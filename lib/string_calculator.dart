@@ -18,6 +18,13 @@ class StringCalculator {
         .map((num) => int.tryParse(num) ?? 0)
         .toList();
 
+    List<int> negatives = numList.where((num) => num < 0).toList();
+
+    if (negatives.isNotEmpty) {
+
+      throw Exception("Negative numbers not allowed: ${negatives.join(", ")}");
+    }
+
     return numList.reduce((a, b) => a + b);
 
 

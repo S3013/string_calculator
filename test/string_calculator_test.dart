@@ -31,6 +31,13 @@ void main() {
       expect(StringCalculator.add('//[***]\n1***2***3'), 6);
     });
 
+    test('Negative numbers should throw an exception', () {
+      expect(() => StringCalculator.add("1,-2,3"), throwsA(isA<Exception>()));
+    });
+
+    test('Multi-Negative numbers should throw an exception', () {
+      expect(() => StringCalculator.add("1,-2,-3"), throwsA(isA<Exception>()));
+    });
   });
 }
 
