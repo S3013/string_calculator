@@ -73,3 +73,8 @@ Negative numbers
 Input- "1,-2,3"
 Output- Throws FormatException('Negative numbers not allowed: -2')
 
+Multi-Character Custom Delimiter
+
+Input- '//[***]\n1***2***3'
+Output- 6
+
