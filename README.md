@@ -58,3 +58,18 @@ Two number separated by commas.
 input- 1,5
 output- 6
 
+NewLine as Delimiters
+
+Input- "1\n2,3"
+Output- 6
+
+Custom Delimiters
+
+Input- "//;\n1;2"
+Output- 3
+
+Negative numbers
+
+Input- "1,-2,3"
+Output- Throws FormatException('Negative numbers not allowed: -2')
+
