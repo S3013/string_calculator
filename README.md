@@ -78,3 +78,11 @@ Multi-Character Custom Delimiter
 Input- '//[***]\n1***2***3'
 Output- 6
 
+
+# Running the TEST
+
+1. Run the Test
+
+flutter test
+
+2. Expected test result is all test should pass as String calculator behaves like expected under all scenarios.
